@@ -74,7 +74,7 @@ def backup_databases():
     else:
         print("Không tìm thấy file database nào để backup.")
 
-schedule.every(1).minutes.do(backup_databases)
+schedule.every().day.at("00:00").do(backup_databases)
 
 if __name__ == "__main__":
     print("Script backup database đang chạy...")
